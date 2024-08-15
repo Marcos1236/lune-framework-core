@@ -1,0 +1,35 @@
+{
+    "name": "marcos1236/lune-framework",
+    "description": "Simple PHP framework",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lune\\": "src/"
+        }
+    },
+    "scripts": {
+        "tests": "phpunit --color=always --testdox tests/",
+        "php-cs-fixer": "php-cs-fixer fix --diff"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lune\\Tests\\": "tests"
+        },
+        "files": [
+            "src/Helpers/app.php",
+            "src/Helpers/http.php",
+            "src/Helpers/string.php",
+            "src/Helpers/session.php",
+            "src/Helpers/auth.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "friendsofphp/php-cs-fixer": "^3.61"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "symfony/console": "^7.1"
+    }
+}
